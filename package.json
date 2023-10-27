@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap-like-grid",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel serve ./index.html"
+  },
+  "keywords": [],
+  "author": "pqxglobal",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
