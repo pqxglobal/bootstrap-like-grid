@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  background-color: lightgreen;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    flex: 1;
+  }
+
+  @for $size from 1 through 12 {
+    .col-#{$size} {
+      width: calc($size / 12 * 100%);
+    }
+  }
+}
+
+// tablets
+@media (min-width: 768px) {
+
+}
