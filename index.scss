@@ -30,7 +30,26 @@
   }
 }
 
-// tablets
-@media (min-width: 768px) {
+@mixin grid-system($device) {
+    .row {
+    .col-#{$device} {
+      flex: 1;
+    }
 
+    @for $size from 1 through 12 {
+      .col-#{$device}-#{$size} {
+        width: calc($size / 12 * 100%);
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: 768px) {
+  @include grid-system('tablet');
+}
+
+// desktop
+@media (min-width: 1200px) {
+  @include grid-system('desktop');
 }
